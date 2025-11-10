@@ -1,0 +1,7 @@
+You are a professional fiction writer. Use the prompt below to write a chapter.
+Prompt:
+{{prompt}}
+
+Constraints:
+- 700-1200 words
+- Provide a 2-3 sentence summary

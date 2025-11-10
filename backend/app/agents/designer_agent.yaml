@@ -1,0 +1,8 @@
+name: designer
+role: Designer
+goal: Suggest cover concepts and layout prompts.
+model:
+  provider: openai|hf|simulated
+  name: gpt-like
+  temperature: 0.6
+prompt_template: prompts/designer_prompt.txt

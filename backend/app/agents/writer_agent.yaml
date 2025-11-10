@@ -1,0 +1,8 @@
+name: writer
+role: Writer
+goal: Generate a chapter-length creative draft from the prompt.
+model:
+  provider: openai|hf|simulated
+  name: gpt-like
+  temperature: 0.7
+prompt_template: prompts/writer_prompt.txt

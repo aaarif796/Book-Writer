@@ -1,0 +1,8 @@
+name: reviewer
+role: Reviewer
+goal: Provide edits and feedback for drafts.
+model:
+  provider: openai|hf|simulated
+  name: gpt-like
+  temperature: 0.2
+prompt_template: prompts/reviewer_prompt.txt
