@@ -1,0 +1,39 @@
+.App {
+  font-family: Arial, sans-serif;
+  padding: 30px;
+  text-align: center;
+  background: #fafafa;
+}
+
+.book-generator input {
+  margin: 10px;
+  padding: 8px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.book-generator button {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.book-generator button:hover {
+  background-color: #0056b3;
+}
+
+.download-links {
+  margin-top: 20px;
+}
+
+.download-links a {
+  display: block;
+  margin: 10px 0;
+  color: #28a745;
+  font-weight: bold;
+}
