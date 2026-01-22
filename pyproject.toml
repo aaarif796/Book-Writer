@@ -1,0 +1,25 @@
+[project]
+name = "book-writer"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "black>=26.1.0",
+    "faiss-cpu>=1.13.2",
+    "fastapi[all]>=0.128.0",
+    "flake8>=7.3.0",
+    "jinja2>=3.1.6",
+    "numpy>=2.2.6",
+    "openai>=2.15.0",
+    "pandas>=2.3.3",
+    "pydantic>=2.12.5",
+    "pymysql>=1.1.2",
+    "pytest>=9.0.2",
+    "python-dotenv>=1.2.1",
+    "pyyaml>=6.0.3",
+    "requests>=2.32.5",
+    "sqlalchemy>=2.0.46",
+    "streamlit>=1.53.0",
+    "uvicorn[standard]>=0.40.0",
+]
