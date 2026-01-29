@@ -1,0 +1,16 @@
+# Mapping of agent logical names to either inline configs or paths to agent YAMLs
+agents:
+  writer: ../agents/writer_agent.yaml
+  reviewer: ../agents/reviewer_agent.yaml
+  designer: ../agents/designer_agent.yaml
+
+# You can also provide inline definitions instead of file paths:
+# agents:
+#   custom_agent:
+#     name: custom_agent
+#     role: "A helpful assistant"
+#     model:
+#       provider: "openai"
+#       name: "gpt-4"
+#       temperature: 0.3
+#     prompt_template: ../agents/prompts/custom_prompt.txt
