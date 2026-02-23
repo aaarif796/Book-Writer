@@ -1,16 +1,14 @@
-# Mapping of agent logical names to either inline configs or paths to agent YAMLs
-agents:
-  writer: ../agents/writer_agent.yaml
-  reviewer: ../agents/reviewer_agent.yaml
-  designer: ../agents/designer_agent.yaml
+outline_writer:
+  role: "Book Outline Specialist"
+  model: "gpt_oss_120b"
+  temperature: 0.7
 
-# You can also provide inline definitions instead of file paths:
-# agents:
-#   custom_agent:
-#     name: custom_agent
-#     role: "A helpful assistant"
-#     model:
-#       provider: "openai"
-#       name: "gpt-4"
-#       temperature: 0.3
-#     prompt_template: ../agents/prompts/custom_prompt.txt
+chapter_writer:
+  role: "Chapter Content Writer"
+  model: "gpt_oss_120b"
+  temperature: 0.8
+
+reviewer:
+  role: "Content Reviewer and Editor"
+  model: "gpt_oss_120b"
+  temperature: 0.5

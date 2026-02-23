@@ -1,10 +1,10 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.api import routes_agents, routes_workflows, routes_health
+from app.api import routes_agents, routes_workflows, routes_health, book_routes
 from app.db.database import init_db
 from app.utils.logger import logger
 
-app = FastAPI(title="Book Writer AI (Robust)")
+app = FastAPI(title="Book Writer AI")
 
 app.add_middleware(
     CORSMiddleware,
@@ -17,6 +17,7 @@ app.add_middleware(
 app.include_router(routes_health.router)
 app.include_router(routes_agents.router, prefix="/agents", tags=["Agents"])
 app.include_router(routes_workflows.router, prefix="/workflows", tags=["Workflows"])
+app.include_router(book_routes.router, prefix="/api", tags=["Books"])
 
 @app.on_event('startup')
 async def startup_event():
@@ -28,4 +29,4 @@ async def startup_event():
 
 @app.get('/')
 async def root():
-    return {'message': 'Book Writer AI backend (robust) is running'}
+    return {'message': 'Book Writer AI backend is running'}

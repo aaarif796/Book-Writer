@@ -1,0 +1,6 @@
+# Optional tools configuration
+# Add tools here when needed, e.g.:
+# web_search:
+#   type: "web"
+#   provider: "serpapi"
+#   api_key: "${SERPAPI_KEY}"
