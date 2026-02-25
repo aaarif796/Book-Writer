@@ -1,0 +1,247 @@
+2026-02-23 15:49:28,645 - INFO - Database initialized
+2026-02-23 15:49:28,654 - ERROR - init_db failed: (sqlite3.OperationalError) table books already exists
+[SQL: 
+CREATE TABLE books (
+	id INTEGER NOT NULL, 
+	title VARCHAR(255) NOT NULL, 
+	author VARCHAR(255) NOT NULL, 
+	summary TEXT, 
+	PRIMARY KEY (id)
+)
+
+]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Traceback (most recent call last):
+  File "D:\Book-Writer\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "D:\Book-Writer\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: table books already exists
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Book-Writer\backend\app\db\database.py", line 13, in init_db
+    Base.metadata.create_all(bind=engine)
+  File "D:\Book-Writer\.venv\Lib\site-packages\sqlalchemy\sql\schema.py", line 5928, in create_all
+    bind._run_ddl_visitor(
+  File "D:\Book-Writer\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 3260, in _run_ddl_visitor
+    conn._run_ddl_visitor(visitorcallable, element, **kwargs)
+  File "D:\Book-Writer\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2467, in _run_ddl_visitor
+    ).traverse_single(element)
+      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Book-Writer\.venv\Lib\site-packages\sqlalchemy\sql\visitors.py", line 661, in traverse_single
+    return meth(obj, **kw)
+           ^^^^^^^^^^^^^^^
+  File "D:\Book-Writer\.venv\Lib\site-packages\sqlalchemy\sql\ddl.py", line 984, in visit_metadata
+    self.traverse_single(
+  File "D:\Book-Writer\.venv\Lib\site-packages\sqlalchemy\sql\visitors.py", line 661, in traverse_single
+    return meth(obj, **kw)
+           ^^^^^^^^^^^^^^^
+  File "D:\Book-Writer\.venv\Lib\site-packages\sqlalchemy\sql\ddl.py", line 1022, in visit_table
+    )._invoke_with(self.connection)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Book-Writer\.venv\Lib\site-packages\sqlalchemy\sql\ddl.py", line 321, in _invoke_with
+    return bind.execute(self)
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\Book-Writer\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1419, in execute
+    return meth(
+           ^^^^^
+  File "D:\Book-Writer\.venv\Lib\site-packages\sqlalchemy\sql\ddl.py", line 187, in _execute_on_connection
+    return connection._execute_ddl(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Book-Writer\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1530, in _execute_ddl
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Book-Writer\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Book-Writer\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "D:\Book-Writer\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2363, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "D:\Book-Writer\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "D:\Book-Writer\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) table books already exists
+[SQL: 
+CREATE TABLE books (
+	id INTEGER NOT NULL, 
+	title VARCHAR(255) NOT NULL, 
+	author VARCHAR(255) NOT NULL, 
+	summary TEXT, 
+	PRIMARY KEY (id)
+)
+
+]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-02-23 15:49:28,661 - INFO - Database initialized
+2026-02-23 15:49:28,654 - ERROR - init_db failed: (sqlite3.OperationalError) table books already exists
+[SQL: 
+CREATE TABLE books (
+	id INTEGER NOT NULL, 
+	title VARCHAR(255) NOT NULL, 
+	author VARCHAR(255) NOT NULL, 
+	summary TEXT, 
+	PRIMARY KEY (id)
+)
+
+]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Traceback (most recent call last):
+  File "D:\Book-Writer\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "D:\Book-Writer\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: table books already exists
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Book-Writer\backend\app\db\database.py", line 13, in init_db
+    Base.metadata.create_all(bind=engine)
+  File "D:\Book-Writer\.venv\Lib\site-packages\sqlalchemy\sql\schema.py", line 5928, in create_all
+    bind._run_ddl_visitor(
+  File "D:\Book-Writer\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 3260, in _run_ddl_visitor
+    conn._run_ddl_visitor(visitorcallable, element, **kwargs)
+  File "D:\Book-Writer\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2467, in _run_ddl_visitor
+    ).traverse_single(element)
+      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Book-Writer\.venv\Lib\site-packages\sqlalchemy\sql\visitors.py", line 661, in traverse_single
+    return meth(obj, **kw)
+           ^^^^^^^^^^^^^^^
+  File "D:\Book-Writer\.venv\Lib\site-packages\sqlalchemy\sql\ddl.py", line 984, in visit_metadata
+    self.traverse_single(
+  File "D:\Book-Writer\.venv\Lib\site-packages\sqlalchemy\sql\visitors.py", line 661, in traverse_single
+    return meth(obj, **kw)
+           ^^^^^^^^^^^^^^^
+  File "D:\Book-Writer\.venv\Lib\site-packages\sqlalchemy\sql\ddl.py", line 1022, in visit_table
+    )._invoke_with(self.connection)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Book-Writer\.venv\Lib\site-packages\sqlalchemy\sql\ddl.py", line 321, in _invoke_with
+    return bind.execute(self)
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\Book-Writer\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1419, in execute
+    return meth(
+           ^^^^^
+  File "D:\Book-Writer\.venv\Lib\site-packages\sqlalchemy\sql\ddl.py", line 187, in _execute_on_connection
+    return connection._execute_ddl(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Book-Writer\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1530, in _execute_ddl
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Book-Writer\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Book-Writer\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "D:\Book-Writer\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2363, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "D:\Book-Writer\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "D:\Book-Writer\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) table books already exists
+[SQL: 
+CREATE TABLE books (
+	id INTEGER NOT NULL, 
+	title VARCHAR(255) NOT NULL, 
+	author VARCHAR(255) NOT NULL, 
+	summary TEXT, 
+	PRIMARY KEY (id)
+)
+
+]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-02-23 15:49:28,661 - INFO - Database initialized
+2026-02-23 15:49:31,039 - INFO - Database initialized
+2026-02-23 15:49:31,045 - INFO - Database initialized
+2026-02-23 15:49:31,057 - INFO - Database initialized
+2026-02-23 15:49:33,857 - INFO - Database initialized
+2026-02-23 15:51:23,120 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-02-23 15:51:23,123 - ERROR - Writer error
+Traceback (most recent call last):
+  File "D:\Book-Writer\backend\app\agents\llm_factory.py", line 62, in generate
+    response = await ollama.chat(
+               ^^^^^^^^^^^^^^^^^^
+TypeError: object ChatResponse can't be used in 'await' expression
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Book-Writer\backend\app\api\routes_agents.py", line 21, in write_endpoint
+    result = await crew.execute("write_chapter", {"chapter_content": req.prompt})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Book-Writer\backend\app\agents\crew.py", line 38, in execute
+    response = await llm.generate(system_prompt)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Book-Writer\backend\app\agents\llm_factory.py", line 72, in generate
+    raise RuntimeError(f"Ollama generation failed: {e}")
+RuntimeError: Ollama generation failed: object ChatResponse can't be used in 'await' expression
+2026-02-23 15:53:10,627 - INFO - Database initialized
+2026-02-23 15:55:25,425 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-02-23 15:55:25,425 - ERROR - Writer error
+Traceback (most recent call last):
+  File "D:\Book-Writer\backend\app\agents\llm_factory.py", line 62, in generate
+    response = await ollama.chat(
+               ^^^^^^^^^^^^^^^^^^
+TypeError: object ChatResponse can't be used in 'await' expression
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Book-Writer\backend\app\api\routes_agents.py", line 21, in write_endpoint
+    result = await crew.execute("write_chapter", {"chapter_content": req.prompt})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Book-Writer\backend\app\agents\crew.py", line 38, in execute
+    response = await llm.generate(system_prompt)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Book-Writer\backend\app\agents\llm_factory.py", line 72, in generate
+    raise RuntimeError(f"Ollama generation failed: {e}")
+RuntimeError: Ollama generation failed: object ChatResponse can't be used in 'await' expression
+2026-02-23 16:12:30,693 - INFO - Database initialized
+2026-02-23 16:13:19,862 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-02-23 16:20:42,723 - INFO - Database initialized
+2026-02-23 16:20:52,148 - INFO - Database initialized
+2026-02-23 16:21:26,491 - INFO - Database initialized
+2026-02-23 16:23:07,100 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-02-23 16:26:55,757 - INFO - Database initialized
+2026-02-23 16:28:46,049 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-02-23 16:29:17,075 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-02-23 16:29:45,820 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-02-23 16:30:14,781 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-02-23 16:30:45,571 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-02-23 16:36:59,733 - INFO - Database initialized
+2026-02-23 16:37:36,301 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-02-23 16:38:11,395 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-02-23 16:38:47,292 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-02-23 16:39:12,861 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-02-23 16:39:46,684 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-02-23 16:40:52,582 - INFO - Database initialized
+2026-02-23 16:41:22,642 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-02-23 16:41:54,941 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-02-23 16:42:32,517 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-02-23 16:42:55,026 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-02-23 16:43:22,735 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-02-24 10:06:25,500 - INFO - Database initialized
+2026-02-24 10:08:56,088 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-02-24 10:26:44,966 - INFO - Database initialized
+2026-02-24 10:48:52,618 - INFO - Database initialized
+2026-02-24 12:28:04,275 - INFO - Database initialized
+2026-02-24 12:32:17,264 - INFO - No auth config provided, skipping auth setup
+2026-02-24 12:32:17,264 - INFO - MCP SSE server listening at /mcp
+2026-02-24 12:32:17,270 - INFO - Database initialized
+2026-02-24 14:35:17,562 - INFO - No auth config provided, skipping auth setup
+2026-02-24 14:35:17,563 - INFO - MCP SSE server listening at /mcp
+2026-02-24 14:35:17,589 - INFO - Database initialized
+2026-02-24 15:08:32,474 - INFO - No auth config provided, skipping auth setup
+2026-02-24 15:08:32,474 - INFO - MCP SSE server listening at /mcp
+2026-02-24 15:08:32,506 - INFO - Database initialized
+2026-02-24 15:15:17,353 - INFO - No auth config provided, skipping auth setup
+2026-02-24 15:15:17,353 - INFO - MCP SSE server listening at /mcp
+2026-02-24 15:15:17,370 - INFO - Database initialized
+2026-02-24 16:07:26,959 - INFO - No auth config provided, skipping auth setup
+2026-02-24 16:07:26,960 - INFO - MCP SSE server listening at /mcp
+2026-02-24 16:07:26,988 - INFO - Database initialized
+2026-02-24 16:40:58,922 - INFO - Processing request of type ListToolsRequest
