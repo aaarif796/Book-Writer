@@ -1,16 +1,11 @@
-# Definition of reusable tasks and which agent handles them
-tasks:
-  draft_chapter:
-    description: "Create a first-draft chapter from a prompt"
-    agent: writer
-    prompt_var: prompt
-  review_chapter:
-    description: "Review and suggest improvements for a chapter"
-    agent: reviewer
-    prompt_var: text
-  design_cover:
-    description: "Generate cover concept images/prompts"
-    agent: designer
-    prompt_var: context
+generate_outline:
+  description: "Generate structured outline for a book"
+  agent: "outline_writer"
 
-# Tasks can reference prompt templates and other metadata as needed.
+write_chapter:
+  description: "Write a complete chapter based on outline"
+  agent: "chapter_writer"
+
+review_chapter:
+  description: "Review and improve chapter content"
+  agent: "reviewer"
